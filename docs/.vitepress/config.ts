@@ -49,6 +49,12 @@ export default defineConfig({
             { text: '概述', link: '/guide/' },
             { text: '快速开始', link: '/guide/getting-started' }
           ]
+        },
+        {
+          text: '种植手册',
+          items: [
+            { text: '海原越夏小番茄种植手册', link: '/guide/tomato-guide' }
+          ]
         }
       ],
       '/reference/': [
