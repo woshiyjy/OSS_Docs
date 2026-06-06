@@ -1,6 +1,6 @@
 # 快速开始
 
-本文档站基于 [VitePress](https://vitepress.dev/) 构建，使用 Markdown 编写所有文档。
+口感番茄知识库基于 [VitePress](https://vitepress.dev/) 构建，使用 Markdown 编写所有文档。
 
 ## 如何使用
 

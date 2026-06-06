@@ -1,7 +1,7 @@
 {
   "name": "oss-doc",
   "version": "1.0.0",
-  "description": "技术文档站 - VitePress + OSS + CDN",
+  "description": "口感番茄知识库 - VitePress + OSS + CDN",
   "type": "module",
   "scripts": {
     "dev": "vitepress dev docs",
