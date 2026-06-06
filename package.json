@@ -1,0 +1,17 @@
+{
+  "name": "oss-doc",
+  "version": "1.0.0",
+  "description": "技术文档站 - VitePress + OSS + CDN",
+  "type": "module",
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "preview": "vitepress preview docs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "vitepress": "^1.6.4"
+  }
+}

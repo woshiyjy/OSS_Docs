@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://docs.wehifun.cn/sitemap.xml

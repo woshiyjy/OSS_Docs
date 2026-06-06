@@ -1,0 +1,23 @@
+# 技术文档站 · AI 知识库索引
+# 本文件为 AI Agent 提供全站内容索引，便于 AI 快速理解站点结构
+
+## 关于本站
+
+技术文档知识库，面向开发者和 AI Agent 设计。
+基于 VitePress 构建，所有内容以 Markdown 源码形式存放。
+
+## 页面索引
+
+### 指南
+- 概述: https://docs.wehifun.cn/guide/
+- 快速开始: https://docs.wehifun.cn/guide/getting-started.html
+
+### 参考文档
+- 概述: https://docs.wehifun.cn/reference/
+
+## 结构说明
+
+- 所有页面均支持 Markdown 原始格式
+- 源代码仓库: docs/ 目录
+- 每个 .md 文件对应一个页面
+- 侧边栏导航在 docs/.vitepress/config.ts 中定义
