@@ -7,7 +7,7 @@ on:
 
 jobs:
   build-and-deploy:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
 
     steps:
       - name: 检出代码
@@ -25,40 +25,17 @@ jobs:
       - name: 构建 VitePress
         run: npm run build
 
-      - name: 安装 ossutil 并上传
+      - name: 上传到 OSS
         env:
-          AK_ID: ${{ secrets.ALIBABA_CLOUD_ACCESS_KEY_ID }}
-          AK_SECRET: ${{ secrets.ALIBABA_CLOUD_ACCESS_KEY_SECRET }}
+          OSS_KEY_ID: ${{ secrets.ALIBABA_CLOUD_ACCESS_KEY_ID }}
+          OSS_KEY_SECRET: ${{ secrets.ALIBABA_CLOUD_ACCESS_KEY_SECRET }}
         run: |
-          set -ex
-
-          echo ">>> 下载 ossutil..."
-          curl -fsSL -o ossutil https://gosspublic.alicdn.com/ossutil/1.7.15/ossutil64
-          chmod +x ossutil
-          file ossutil
-
-          echo ">>> 上传文件到 OSS..."
-          ./ossutil cp -r docs/.vitepress/dist/ oss://docs-wehifun/ --update -f \
-            -i "$AK_ID" \
-            -k "$AK_SECRET" \
-            -e oss-cn-beijing.aliyuncs.com
+          npm install ali-oss --no-save
+          node .github/workflows/upload.mjs
 
       - name: 刷新 CDN
         env:
-          AK_ID: ${{ secrets.ALIBABA_CLOUD_ACCESS_KEY_ID }}
-          AK_SECRET: ${{ secrets.ALIBABA_CLOUD_ACCESS_KEY_SECRET }}
+          OSS_KEY_ID: ${{ secrets.ALIBABA_CLOUD_ACCESS_KEY_ID }}
+          OSS_KEY_SECRET: ${{ secrets.ALIBABA_CLOUD_ACCESS_KEY_SECRET }}
         run: |
-          set -ex
-
-          echo ">>> 下载 aliyun CLI..."
-          curl -fsSL -o aliyun.tgz https://aliyuncli.alicdn.com/aliyun-cli-linux-latest-amd64.tgz
-          tar xzf aliyun.tgz
-          file aliyun
-
-          echo ">>> 刷新 CDN..."
-          ./aliyun cdn RefreshObjectCaches \
-            --access-key-id "$AK_ID" \
-            --access-key-secret "$AK_SECRET" \
-            --region cn-beijing \
-            --ObjectPath https://docs.wehifun.cn/ \
-            --ObjectType Directory
+          node .github/workflows/refresh.mjs
