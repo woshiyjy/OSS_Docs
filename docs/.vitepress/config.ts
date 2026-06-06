@@ -2,8 +2,8 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: '技术文档',
-  description: '技术文档知识库',
+  title: '口感番茄知识库',
+  description: '口感番茄种植技术知识库',
 
   // OSS 静态托管不支持 cleanUrls，所以用带 .html 的链接
   // 如果要部署到子目录，这里改成 '/子目录名/'
@@ -37,7 +37,7 @@ export default defineConfig({
     nav: [
       { text: '首页', link: '/' },
       { text: '指南', link: '/guide/' },
-      { text: '参考', link: '/reference/' }
+      { text: '种植手册', link: '/guide/tomato-guide' }
     ],
 
     // 侧边栏
@@ -74,7 +74,7 @@ export default defineConfig({
 
     // 页脚
     footer: {
-      message: '基于 VitePress 构建',
+      message: '口感番茄知识库 · 基于 VitePress 构建',
       copyright: 'Copyright © 2026'
     },
 

@@ -2,28 +2,28 @@
 layout: home
 
 hero:
-  name: 技术文档
-  text: 外挂知识库
-  tagline: 面向开发者与 AI 的技术文档中心
+  name: 口感番茄知识库
+  text: 海原越夏小番茄
+  tagline: 专注口感番茄种植技术的知识共享平台
   actions:
     - theme: brand
       text: 开始阅读
       link: /guide/
     - theme: alt
-      text: 参考文档
-      link: /reference/
+      text: 种植手册
+      link: /guide/tomato-guide
   image:
     src: /logo.svg
     alt: Logo
 
 features:
+  - icon: 🍅
+    title: 种植技术
+    details: 从育苗到采收，系统化整理越夏小番茄种植全流程技术要点
   - icon: 📖
-    title: 结构化文档
-    details: 清晰的层级结构，支持全文搜索，快速定位所需内容
+    title: 知识沉淀
+    details: 结构化文档，支持全文搜索，快速定位种植技术细节
   - icon: 🤖
-    title: AI 友好
-    details: Markdown 源文件可直接作为 LLM 知识库，支持 AI Agent 读取
-  - icon: ⚡
-    title: 持续更新
-    details: 基于 VitePress，编辑 Markdown 即可更新，一键部署上线
+    title: AI 可读
+    details: Markdown 源文件可作为 AI 知识库，方便智能问答和技术咨询
 ---
