@@ -3,7 +3,7 @@ name: Deploy to OSS
 on:
   push:
     branches: [main]
-  workflow_dispatch:  # 允许手动触发
+  workflow_dispatch:
 
 jobs:
   build-and-deploy:
@@ -25,38 +25,38 @@ jobs:
       - name: 构建 VitePress
         run: npm run build
 
-      - name: 安装 ossutil
+      - name: 安装 ossutil 并上传
+        env:
+          AK_ID: ${{ secrets.ALIBABA_CLOUD_ACCESS_KEY_ID }}
+          AK_SECRET: ${{ secrets.ALIBABA_CLOUD_ACCESS_KEY_SECRET }}
         run: |
+          set -e
           wget -q https://gosspublic.alicdn.com/ossutil/1.7.15/ossutil64 -O ossutil
           chmod +x ossutil
           sudo mv ossutil /usr/local/bin/
 
-      - name: 上传到 OSS
-        env:
-          ALIBABA_CLOUD_ACCESS_KEY_ID: ${{ secrets.ALIBABA_CLOUD_ACCESS_KEY_ID }}
-          ALIBABA_CLOUD_ACCESS_KEY_SECRET: ${{ secrets.ALIBABA_CLOUD_ACCESS_KEY_SECRET }}
-        run: |
-          ossutil config -e oss-cn-beijing.aliyuncs.com \
-            -i "$ALIBABA_CLOUD_ACCESS_KEY_ID" \
-            -k "$ALIBABA_CLOUD_ACCESS_KEY_SECRET" \
-            --mode AK -L CH
-          ossutil cp -r docs/.vitepress/dist/ oss://docs-wehifun/ --update -f
+          echo "ossutil 版本: $(ossutil --version)"
+
+          ossutil cp -r docs/.vitepress/dist/ oss://docs-wehifun/ --update -f \
+            -i "$AK_ID" \
+            -k "$AK_SECRET" \
+            -e oss-cn-beijing.aliyuncs.com
 
       - name: 刷新 CDN
         env:
-          ALIBABA_CLOUD_ACCESS_KEY_ID: ${{ secrets.ALIBABA_CLOUD_ACCESS_KEY_ID }}
-          ALIBABA_CLOUD_ACCESS_KEY_SECRET: ${{ secrets.ALIBABA_CLOUD_ACCESS_KEY_SECRET }}
+          AK_ID: ${{ secrets.ALIBABA_CLOUD_ACCESS_KEY_ID }}
+          AK_SECRET: ${{ secrets.ALIBABA_CLOUD_ACCESS_KEY_SECRET }}
         run: |
-          # 安装 aliyun CLI
+          set -e
           curl -sSL https://aliyuncli.alicdn.com/aliyun-cli-linux-latest-amd64.tgz -o aliyun.tgz
           tar xzf aliyun.tgz
           sudo mv aliyun /usr/local/bin/
 
-          aliyun configure set --profile default \
-            --access-key-id "$ALIBABA_CLOUD_ACCESS_KEY_ID" \
-            --access-key-secret "$ALIBABA_CLOUD_ACCESS_KEY_SECRET" \
-            --region cn-beijing --language zh
+          echo "aliyun CLI 版本: $(aliyun --version)"
 
           aliyun cdn RefreshObjectCaches \
+            --access-key-id "$AK_ID" \
+            --access-key-secret "$AK_SECRET" \
+            --region cn-beijing \
             --ObjectPath https://docs.wehifun.cn/ \
             --ObjectType Directory
