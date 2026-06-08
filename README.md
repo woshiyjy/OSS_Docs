@@ -98,3 +98,14 @@ Push 到 `main` 分支后，GitHub Actions 自动构建并部署到 OSS + 刷新
 3. 在 `docs/` 下对应分类目录中新建或编辑 `.md` 文件
 4. 如需调整导航，编辑 `docs/.vitepress/config.ts`（顶部 nav + 侧边栏 sidebar）
 5. 本地 `npm run dev` 预览确认后提交 PR，合并后自动部署
+
+## 贡献者
+
+感谢以下贡献者的付出：
+
+<!-- 在此添加贡献者：请在 PR 中将自己的名字和 GitHub ID 添加到列表中 -->
+
+- **知南** ([@woshiyjy](https://github.com/woshiyjy)) — 项目发起人 & 主要维护者
+- **787158783-arch** ([@787158783-arch](https://github.com/787158783-arch)) — 协作者
+
+欢迎通过 Pull Request 贡献知识内容，一起建设口感番茄知识库！
