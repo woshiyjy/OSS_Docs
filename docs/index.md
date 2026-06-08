@@ -8,10 +8,10 @@ hero:
   actions:
     - theme: brand
       text: 开始阅读
-      link: /guide/
+      link: /品种和育苗/
     - theme: alt
-      text: 种植手册
-      link: /guide/tomato-guide
+      text: 产区和茬口
+      link: /产区和茬口/
   image:
     src: /logo.svg
     alt: Logo

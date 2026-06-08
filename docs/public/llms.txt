@@ -3,23 +3,88 @@
 
 ## 关于本站
 
-口感番茄知识库，专注海原越夏小番茄种植技术。
+口感番茄知识库，专注口感番茄种植技术的知识共享平台。
 基于 VitePress 构建，所有内容以 Markdown 源码形式存放，可直接被 AI Agent 读取。
 
 ## 页面索引
 
-### 指南
-- 概述: https://docs.wehifun.cn/guide/
-- 快速开始: https://docs.wehifun.cn/guide/getting-started.html
+### 品种和育苗
+- 概述: https://docs.wehifun.cn/品种和育苗/
+- 红果 — 釜山88: https://docs.wehifun.cn/品种和育苗/红果/釜山88.html
+- 红果 — 高俪红: https://docs.wehifun.cn/品种和育苗/红果/高俪红.html
+- 红果 — 首而红: https://docs.wehifun.cn/品种和育苗/红果/首而红.html
+- 红果 — 圣宏2号: https://docs.wehifun.cn/品种和育苗/红果/圣宏2号.html
+- 黄果 — 明珠3号: https://docs.wehifun.cn/品种和育苗/黄果/明珠3号.html
+- 绿果 — 青甜: https://docs.wehifun.cn/品种和育苗/绿果/青甜.html
+- 其他颜色 — 358: https://docs.wehifun.cn/品种和育苗/其他颜色/358.html
 
-### 种植手册
-- 海原越夏小番茄种植手册: https://docs.wehifun.cn/guide/tomato-guide.html
+### 基础条件
+- 概述: https://docs.wehifun.cn/基础条件/
+- 设施类型 — 露地: https://docs.wehifun.cn/基础条件/设施类型/露地.html
+- 设施类型 — 小拱棚: https://docs.wehifun.cn/基础条件/设施类型/小拱棚.html
+- 设施类型 — 连栋拱棚: https://docs.wehifun.cn/基础条件/设施类型/连栋拱棚.html
+- 设施类型 — 日光温室: https://docs.wehifun.cn/基础条件/设施类型/日光温室.html
+- 栽培类型 — 土壤栽培: https://docs.wehifun.cn/基础条件/栽培类型/土壤栽培.html
+- 栽培类型 — 基质栽培: https://docs.wehifun.cn/基础条件/栽培类型/基质栽培.html
+- 水系条件 — 灌溉首部: https://docs.wehifun.cn/基础条件/水系条件/灌溉首部.html
+- 水系条件 — 滴灌系统: https://docs.wehifun.cn/基础条件/水系条件/滴灌系统.html
+- 水系条件 — 滴箭系统: https://docs.wehifun.cn/基础条件/水系条件/滴箭系统.html
 
-### 参考文档
-- 概述: https://docs.wehifun.cn/reference/
+### 产区和茬口
+- 概述: https://docs.wehifun.cn/产区和茬口/
+- 产区 — 宁夏产区: https://docs.wehifun.cn/产区和茬口/产区/宁夏产区.html
+- 产区 — 山东产区: https://docs.wehifun.cn/产区和茬口/产区/山东产区.html
+- 产区 — 广东产区: https://docs.wehifun.cn/产区和茬口/产区/广东产区.html
+- 茬口 — 越夏茬口: https://docs.wehifun.cn/产区和茬口/茬口/越夏茬口.html
+- 茬口 — 秋延茬口: https://docs.wehifun.cn/产区和茬口/茬口/秋延茬口.html
+- 茬口 — 越冬茬口: https://docs.wehifun.cn/产区和茬口/茬口/越冬茬口.html
+- 茬口 — 春延茬口: https://docs.wehifun.cn/产区和茬口/茬口/春延茬口.html
+- 价格趋势 — 全年产销价格趋势: https://docs.wehifun.cn/产区和茬口/价格趋势/全年产销价格趋势.html
+- 价格趋势 — 全国主要销售渠道: https://docs.wehifun.cn/产区和茬口/价格趋势/全国主要销售渠道.html
+- 产业模式 — 宁夏产区露地越夏茬口种植: https://docs.wehifun.cn/产区和茬口/产业模式/宁夏产区露地越夏茬口种植.html
+- 产业模式 — 宁夏产区小拱棚越夏茬口种植: https://docs.wehifun.cn/产区和茬口/产业模式/宁夏产区小拱棚越夏茬口种植.html
+- 产业模式 — 山东产区越冬和春延茬口种植: https://docs.wehifun.cn/产区和茬口/产业模式/山东产区越冬和春延茬口种植.html
+- 产业模式 — 山东产区秋延茬口种植: https://docs.wehifun.cn/产区和茬口/产业模式/山东产区秋延茬口种植.html
+- 产业模式 — 广东产区露地越冬茬口种植: https://docs.wehifun.cn/产区和茬口/产业模式/广东产区露地越冬茬口种植.html
+- 产业模式 — 广东产区小拱棚越冬茬口种植: https://docs.wehifun.cn/产区和茬口/产业模式/广东产区小拱棚越冬茬口种植.html
+
+### 种植过程
+- 概述: https://docs.wehifun.cn/种植过程/
+- 定植前准备 — 宁夏产区露地越夏茬口种植（定植前准备）: https://docs.wehifun.cn/种植过程/定植前准备/宁夏产区露地越夏茬口种植（定植前准备）.html
+- 定植前准备 — 宁夏产区小拱棚越夏茬口种植（定植前准备）: https://docs.wehifun.cn/种植过程/定植前准备/宁夏产区小拱棚越夏茬口种植（定植前准备）.html
+- 水肥管理 — 宁夏产区露地越夏茬口种植（水肥管理）: https://docs.wehifun.cn/种植过程/水肥管理/宁夏产区露地越夏茬口种植（水肥管理）.html
+- 水肥管理 — 宁夏产区小拱棚越夏茬口种植（水肥管理）: https://docs.wehifun.cn/种植过程/水肥管理/宁夏产区小拱棚越夏茬口种植（水肥管理）.html
+- 环境管理 — 宁夏产区露地越夏茬口种植（环境管理）: https://docs.wehifun.cn/种植过程/环境管理/宁夏产区露地越夏茬口种植（环境管理）.html
+- 环境管理 — 宁夏产区小拱棚越夏茬口种植（环境管理）: https://docs.wehifun.cn/种植过程/环境管理/宁夏产区小拱棚越夏茬口种植（环境管理）.html
+- 农事管理 — 宁夏产区露地越夏茬口种植（农事管理）: https://docs.wehifun.cn/种植过程/农事管理/宁夏产区露地越夏茬口种植（农事管理）.html
+- 农事管理 — 宁夏产区小拱棚越夏茬口种植（农事管理）: https://docs.wehifun.cn/种植过程/农事管理/宁夏产区小拱棚越夏茬口种植（农事管理）.html
+- 病虫害管理 — 宁夏产区露地越夏茬口种植（病虫害管理）: https://docs.wehifun.cn/种植过程/病虫害管理/宁夏产区露地越夏茬口种植（病虫害管理）.html
+- 病虫害管理 — 宁夏产区小拱棚越夏茬口种植（病虫害管理）: https://docs.wehifun.cn/种植过程/病虫害管理/宁夏产区小拱棚越夏茬口种植（病虫害管理）.html
+
+### 采后处理
+- 概述: https://docs.wehifun.cn/采后处理/
+- 采收 — 采收前准备: https://docs.wehifun.cn/采后处理/采收/采收前准备.html
+- 采收 — 标准化采收流程: https://docs.wehifun.cn/采后处理/采收/标准化采收流程.html
+- 清洗与消杀 — 清洗与消杀流程: https://docs.wehifun.cn/采后处理/清洗与消杀/清洗与消杀流程.html
+- 分拣 — 分拣方法与设备: https://docs.wehifun.cn/采后处理/分拣/分拣方法与设备.html
+- 预冷 — 预冷方法与设备: https://docs.wehifun.cn/采后处理/预冷/预冷方法与设备.html
+- 后熟 — 后熟管理: https://docs.wehifun.cn/采后处理/后熟/后熟管理.html
+- 包装 — 包装标准: https://docs.wehifun.cn/采后处理/包装/包装标准.html
+- 存储 — 存储管理: https://docs.wehifun.cn/采后处理/存储/存储管理.html
+- 运输 — 一次运输: https://docs.wehifun.cn/采后处理/运输/一次运输.html
+- 运输 — 二次运输: https://docs.wehifun.cn/采后处理/运输/二次运输.html
+- 配套设施 — 一体化加工中心规划与建设: https://docs.wehifun.cn/采后处理/配套设施/一体化加工中心规划与建设.html
+
+### 示例
+- 概述: https://docs.wehifun.cn/示例/
+- 智能问答 — 基于知识库的问答模板: https://docs.wehifun.cn/示例/智能问答/基于知识库的问答模板.html
+- 种植计划 — 以周为单位的种植计划模板: https://docs.wehifun.cn/示例/种植计划/以周为单位的种植计划模板.html
+- 病虫害防治 — 常见病虫害防治模板: https://docs.wehifun.cn/示例/病虫害防治/常见病虫害防治模板.html
+- ROI分析 — 宁夏产区小拱棚越夏茬口种植ROI分析模板: https://docs.wehifun.cn/示例/ROI分析/宁夏产区小拱棚越夏茬口种植ROI分析模板.html
 
 ## 结构说明
 
 - 所有页面均支持 Markdown 原始格式
 - 源代码仓库: docs/ 目录
+- 顶部导航 6 大分类：品种和育苗、基础条件、产区和茬口、种植过程、采后处理、示例
 - 侧边栏导航在 docs/.vitepress/config.ts 中定义
