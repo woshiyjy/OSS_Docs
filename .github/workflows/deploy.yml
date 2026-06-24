@@ -47,6 +47,6 @@ jobs:
           username: ${{ secrets.ECS_USER }}
           key: ${{ secrets.ECS_SSH_KEY }}
           source: "docs/"
-          target: "/home/yjy/knowledge/tomato-doc/"
+          target: "/home/yjy/"
           strip_components: 0
           rm: false
