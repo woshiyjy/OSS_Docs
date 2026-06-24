@@ -1,29 +1,27 @@
----
-layout: home
+# 口感番茄知识库
 
-hero:
-  name: 口感番茄知识库
-  text: 海原越夏小番茄
-  tagline: 专注口感番茄种植技术的知识共享平台
-  actions:
-    - theme: brand
-      text: 开始阅读
-      link: /品种和育苗/
-    - theme: alt
-      text: 产区和茬口
-      link: /产区和茬口/
-  image:
-    src: /logo.svg
-    alt: Logo
+口感番茄种植技术知识库，专注口感番茄（越夏小番茄）种植全流程技术。
 
-features:
-  - icon: 🍅
-    title: 种植技术
-    details: 从育苗到采收，系统化整理越夏小番茄种植全流程技术要点
-  - icon: 📖
-    title: 知识沉淀
-    details: 结构化文档，支持全文搜索，快速定位种植技术细节
-  - icon: 🤖
-    title: AI 可读
-    details: Markdown 源文件可作为 AI 知识库，方便智能问答和技术咨询
+本知识库遵循 [OKF（Open Knowledge Format）](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md) v0.1 规范构建——所有文档以 Markdown 文件 + YAML frontmatter 形式存放，可同时被 VitePress 渲染为网站、被 AI Agent 直接消费。
+
+## 品种和育苗
+- [品种和育苗](品种和育苗/) - 番茄品种分类与特性介绍，含红果、黄果、绿果、其他颜色四大类
+
+## 基础条件
+- [基础条件](基础条件/) - 设施类型（露地/小拱棚/连栋拱棚/日光温室）、栽培类型（土壤/基质）、水系条件（灌溉首部/滴灌/滴箭）
+
+## 产区和茬口
+- [产区和茬口](产区和茬口/) - 产区分布（宁夏/山东/广东）、种植茬口（越夏/秋延/越冬/春延）、价格趋势、产业模式
+
+## 种植过程
+- [种植过程](种植过程/) - 定植前准备、水肥管理、环境管理、农事管理、病虫害管理
+
+## 采后处理
+- [采后处理](采后处理/) - 采收、清洗消杀、分拣、预冷、后熟、包装、存储、运输、配套设施
+
+## 示例
+- [示例](示例/) - 问答模板、种植计划模板、病虫害防治模板、ROI 分析模板
+
 ---
+
+> 📘 **AI Agent 使用提示**：本目录即为 OKF Bundle 根目录。先读本页了解全局，再按需进入子目录的 `index.md` 逐层深入。`llms.txt` 提供额外索引入口。变更记录见 [log.md](log.md)。
