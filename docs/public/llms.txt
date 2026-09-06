@@ -71,6 +71,11 @@
 
 ### 采后处理
 - 概述: https://docs.wehifun.cn/采后处理/
+- 规程总则: https://docs.wehifun.cn/采后处理/规程总则.html
+- 配套设施 — 加工单元规划: https://docs.wehifun.cn/采后处理/配套设施/加工单元规划.html
+- 配套设施 — 场址布局与功能区域: https://docs.wehifun.cn/采后处理/配套设施/场址布局与功能区域.html
+- 配套设施 — 冷藏库与温控空间建设: https://docs.wehifun.cn/采后处理/配套设施/冷藏库与温控空间建设.html
+- 配套设施 — 主要设备配置: https://docs.wehifun.cn/采后处理/配套设施/主要设备配置.html
 - 采收 — 采收计划与成熟度: https://docs.wehifun.cn/采后处理/采收/采收计划与成熟度.html
 - 采收 — 田间采收与暂存: https://docs.wehifun.cn/采后处理/采收/田间采收与暂存.html
 - 采收 — 田间运输与到货验收: https://docs.wehifun.cn/采后处理/采收/田间运输与到货验收.html
@@ -80,12 +85,7 @@
 - 包装 — 订单化包装与成品入库: https://docs.wehifun.cn/采后处理/包装/订单化包装与成品入库.html
 - 存储 — 贮藏管理与温湿度控制: https://docs.wehifun.cn/采后处理/存储/贮藏管理与温湿度控制.html
 - 运输 — 装车与运输: https://docs.wehifun.cn/采后处理/运输/装车与运输.html
-- 配套设施 — 规程总则: https://docs.wehifun.cn/采后处理/配套设施/规程总则.html
-- 配套设施 — 加工单元规划: https://docs.wehifun.cn/采后处理/配套设施/加工单元规划.html
-- 配套设施 — 场址布局与功能区域: https://docs.wehifun.cn/采后处理/配套设施/场址布局与功能区域.html
-- 配套设施 — 冷藏库与温控空间建设: https://docs.wehifun.cn/采后处理/配套设施/冷藏库与温控空间建设.html
-- 配套设施 — 主要设备配置: https://docs.wehifun.cn/采后处理/配套设施/主要设备配置.html
-- 配套设施 — 质量与安全管理: https://docs.wehifun.cn/采后处理/配套设施/质量与安全管理.html
+- 质量管理 — 质量与安全管理: https://docs.wehifun.cn/采后处理/质量管理/质量与安全管理.html
 
 ### 示例
 - 概述: https://docs.wehifun.cn/示例/
