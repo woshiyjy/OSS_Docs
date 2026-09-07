@@ -4,7 +4,7 @@
 
 - **目标**：维护「口感番茄知识库」——面向口感番茄（高附加值樱桃番茄）种植的公开知识网站，同时作为 AI 智能体外挂知识库。
 - **项目根**：本目录（`/Users/yuanjingyuan/Documents/Projects/OSS_Doc`）。单一项目，无外层容器。
-- **类型**：VitePress 文档网站（公开部署 阿里云 OSS+CDN → docs.wehifun.cn）+ AI 知识库（ECS）。
+- **类型**：VitePress 纯静态文档网站（阿里云 OSS+CDN → docs.wehifun.cn），通过 `llms.txt` 向 AI 智能体开放检索，无自建服务依赖。
 - **仓库**：`github.com:woshiyjy/OSS_Docs.git`，main 分支，公开仓库。
 
 ## 权威资料地图（何时读什么）

@@ -1,6 +1,6 @@
 # 🍅 口感番茄知识库
 
-口感番茄（高附加值樱桃番茄）种植技术知识库，基于 VitePress 构建，遵循 [OKF（Open Knowledge Format）](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md) v0.1 规范。网站部署于阿里云 OSS + CDN，同时作为 AI 智能体的外挂知识库运行在 ECS 上。
+口感番茄（高附加值樱桃番茄）种植技术知识库，基于 VitePress 构建，遵循 [OKF（Open Knowledge Format）](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md) v0.1 规范。纯静态站点，部署于阿里云 OSS + CDN，并通过 `llms.txt` 向 AI 智能体开放全站检索。
 
 站点采用**产区手册制**：每本产区手册自成完整体系（选址 → 土地整备 → 灌溉 → 生长发育 → 生产 → 拉秧清园），跨产区通用知识（品种、育苗、植保、劳动力、采后）独立成板块。
 
@@ -11,34 +11,26 @@
 ## 系统架构
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│                      飞书组织用户                            │
-│                  "釜山88什么时候定植？"                       │
-└─────────────────────┬───────────────────────────────────────┘
-                      │ Lark Bridge
-                      ▼
-┌─────────────────────────────────────────────────────────────┐
-│              ECS 服务器 (阿里云)                              │
-│  ┌─────────────────────────────────────────────────────┐    │
-│  │    Claude Code + DeepSeek v4 Pro                     │    │
-│  │    ┌──────────────────────────────────────────┐     │    │
-│  │    │  CLAUDE.md: 种植/农业问题 → 检索知识库   │     │    │
-│  │    └──────────────────────────────────────────┘     │    │
-│  │    ┌──────────────────────────────────────────┐     │    │
-│  │    │  OKF Bundle (docs/ 目录)                  │     │    │
-│  │    │  ├── index.md    ├── 品种和育苗/         │     │    │
-│  │    │  ├── log.md      ├── 种植手册/           │     │    │
-│  │    │  └── ...         └── ...                 │     │    │
-│  │    └──────────────────────────────────────────┘     │    │
-│  └─────────────────────────────────────────────────────┘    │
-└─────────────────────────────────────────────────────────────┘
-                      ▲ GitHub Action (SCP 同步)
-                      │
-┌─────────────────────────────────────────────────────────────┐
-│              GitHub Actions                                  │
-│  npm build → OSS + CDN (网站) → SCP → ECS (知识库同步)     │
-└─────────────────────────────────────────────────────────────┘
+┌──────────────────────────────────────────────────────────┐
+│                      仓库 (GitHub)                        │
+│         push main → 触发 Deploy to OSS workflow           │
+└───────────────────────────┬──────────────────────────────┘
+                            ▼
+┌──────────────────────────────────────────────────────────┐
+│                     GitHub Actions                        │
+│   checkout → npm install → npm run build (VitePress)      │
+│       → upload.mjs 上传 OSS（按内容 MD5 增量比对）        │
+│       → refresh.mjs 刷新 CDN                              │
+└───────────────────────────┬──────────────────────────────┘
+                            ▼
+┌──────────────────────────────────────────────────────────┐
+│          阿里云 OSS + CDN（docs.wehifun.cn）              │
+│   ├ 网页访客：浏览知识网站                                 │
+│   └ AI 智能体：读 /llms.txt → 按索引检索具体页面           │
+└──────────────────────────────────────────────────────────┘
 ```
+
+> 历史说明：2026-06～2026-09 曾通过 GitHub Actions SCP 同步 docs/ 到 ECS 服务器，运行 Claude Code + Lark Bridge（飞书集成）作为外挂知识库；2026-09-07 该集成整体退役（commit 6d922f4），现为纯静态知识网站。
 
 ---
 
@@ -47,7 +39,7 @@
 - **网站框架**: [VitePress](https://vitepress.dev/) v1.6+
 - **静态托管**: 阿里云 OSS + CDN（docs.wehifun.cn）
 - **知识规范**: [OKF v0.1](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md)
-- **AI 消费**: Claude Code + DeepSeek v4 Pro（ECS）+ Lark Bridge（飞书集成）
+- **AI 消费**: 无自建服务依赖——任何支持 `llms.txt` 的 AI 工具/Agent 可直接检索本站
 - **CI/CD**: GitHub Actions（push main 自动部署）
 
 ## 本地运行
@@ -176,31 +168,18 @@ docs/
 
 ### 自动部署（推荐）
 
-Push 到 `main` 分支后，GitHub Actions 自动：
-1. 构建 VitePress → 上传 OSS + 刷新 CDN（网站部署）
-2. SCP 同步 `docs/` 目录到 ECS（OKF 知识库更新）
+Push 到 `main` 分支后，GitHub Actions 自动完成：
 
-### ECS 集成配置
+1. 构建 VitePress（含死链检查，`ignoreDeadLinks: false`）
+2. `upload.mjs` 上传到 OSS（按内容 MD5 与 OSS Etag 比对增量上传）
+3. `refresh.mjs` 刷新 CDN
 
-在 GitHub Secrets 中配置以下密钥：
+GitHub Secrets 中仅需两个密钥：
 
 | Secret | 说明 |
 |--------|------|
 | `ALIBABA_CLOUD_ACCESS_KEY_ID` | 阿里云 AccessKey |
 | `ALIBABA_CLOUD_ACCESS_KEY_SECRET` | 阿里云 SecretKey |
-| `ECS_HOST` | ECS 服务器 IP 或域名 |
-| `ECS_USER` | SSH 登录用户名 |
-| `ECS_SSH_KEY` | SSH 私钥（ECS 上需配置对应公钥） |
-
-ECS 侧需提前准备：
-```bash
-# 在 ECS 上执行
-mkdir -p /home/claude/knowledge/tomato-doc/docs/
-# 生成密钥对
-ssh-keygen -t ed25519 -f ~/.ssh/github-actions
-cat ~/.ssh/github-actions.pub >> ~/.ssh/authorized_keys
-# 将私钥内容存入 GitHub Secrets → ECS_SSH_KEY
-```
 
 ### 手动部署
 
@@ -210,32 +189,14 @@ cat ~/.ssh/github-actions.pub >> ~/.ssh/authorized_keys
 
 ---
 
-## ECS 侧 CLAUDE.md 配置
+## AI 智能体接入
 
-在 ECS 上 Claude Code 的工作目录下创建/更新 `CLAUDE.md`：
+本站无需任何自建服务，AI 工具直接检索公开 URL 即可：
 
-```markdown
-# 口感番茄知识库智能助手
-
-## 知识库路径
-`/home/claude/knowledge/tomato-doc/docs/`
-
-## 检索规则
-当用户提问涉及以下关键词时，优先检索知识库后回答：
-- 番茄、小番茄、口感番茄、釜山88
-- 种植、育苗、定植、施肥、水肥、病虫害
-- 茬口、越夏、秋延、越冬、春延
-- 采收、分拣、包装、预冷、存储、运输
-- 产区：宁夏（海原/中宁）、山东、广东
-- 设施：露地、小拱棚、连栋拱棚、日光温室、基质栽培
-- 成本、收益、价格、ROI
-
-## 检索路径（渐进式）
-1. 先读 llms.txt 或 index.md → 了解知识库结构
-2. 定位产区/板块 → 读章节 index.md
-3. 锁定具体文档 → 读完整内容
-4. 引用数据时注明来源文件
-```
+1. 读 [`llms.txt`](https://docs.wehifun.cn/llms.txt) 获取全站页面索引（标题 + URL）
+2. 按板块定位：品种和育苗 / 基础条件 / 种植手册（海原、山东、中宁）/ 植保 / 采后处理 / 产区和茬口 / 工具模板
+3. 读取具体板块前，先读该板块 `index.md` 了解结构
+4. 引用数据时注明来源页面；品种数据以品种卡为唯一落点，产区流程以对应产区手册为准
 
 ---
 

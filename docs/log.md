@@ -1,5 +1,12 @@
 # 更新日志
 
+## 2026-09-07（第八批：系统集成架构简化）
+
+- **ECS 知识库同步集成退役**：不再向 ECS 服务器同步本站内容，ECS 侧 Claude Code + 飞书 Lark Bridge 集成同步下线（workflow 变更 commit 6d922f4）
+- 本站现为**纯静态知识网站**：GitHub push → Actions 构建 → OSS+CDN 发布；AI 智能体仍可通过 [`llms.txt`](/llms.txt) 检索全站，无需任何自建服务
+- 项目文档（README/AGENTS）同步更新架构说明
+
+
 ## 2026-09-06（第七批：种植手册板块微调与项目 Harness 建立）
 
 ### 站点调整（用户反馈）
