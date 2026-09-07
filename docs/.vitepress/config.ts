@@ -349,9 +349,7 @@ export default defineConfig({
     },
 
     // 社交链接
-    socialLinks: [
-      // { icon: 'github', link: 'https://github.com/your-org/your-repo' }
-    ],
+    socialLinks: [{ icon: 'github', link: 'https://github.com/woshiyjy/OSS_Docs' }],
 
     // 页脚
     footer: {
