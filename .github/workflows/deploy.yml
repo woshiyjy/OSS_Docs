@@ -38,15 +38,3 @@ jobs:
           OSS_KEY_SECRET: ${{ secrets.ALIBABA_CLOUD_ACCESS_KEY_SECRET }}
         run: |
           node .github/workflows/refresh.mjs
-
-      - name: 同步 OKF 知识库到 ECS
-        continue-on-error: true
-        uses: appleboy/scp-action@v0.1.7
-        with:
-          host: ${{ secrets.ECS_HOST }}
-          username: ${{ secrets.ECS_USER }}
-          key: ${{ secrets.ECS_SSH_KEY }}
-          source: "docs/"
-          target: "/home/yjy/"
-          strip_components: 0
-          rm: false
