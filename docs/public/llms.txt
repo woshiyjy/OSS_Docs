@@ -6,19 +6,27 @@
 口感番茄知识库，专注口感番茄种植技术的知识共享平台。
 基于 VitePress 构建，所有内容以 Markdown 源码形式存放，可直接被 AI Agent 读取。
 
+站点采用**产区手册制**架构：种植手册板块按产区组织（宁夏海原越夏=核心产区、宁夏中宁越夏、山东基质），
+每本产区手册自成完整体系；品种、育苗、植保、劳动力、采后处理为跨产区通用板块。
+溯源/数字化内容按需求方要求未收录。
+
+## 首页与日志
+
+- 首页: https://docs.wehifun.cn/
+- 知识库日志: https://docs.wehifun.cn/log.html
+
 ## 页面索引
 
 ### 品种和育苗
 - 概述: https://docs.wehifun.cn/品种和育苗/
 - 育苗: https://docs.wehifun.cn/品种和育苗/育苗.html
-- 生长发育: https://docs.wehifun.cn/品种和育苗/生长发育.html
 - 红果 — 釜山88: https://docs.wehifun.cn/品种和育苗/红果/釜山88.html
 - 红果 — 鸿运九九: https://docs.wehifun.cn/品种和育苗/红果/鸿运九九.html
 - 红果 — 玲珑蜜: https://docs.wehifun.cn/品种和育苗/红果/玲珑蜜.html
 - 红果 — 高俪红: https://docs.wehifun.cn/品种和育苗/红果/高俪红.html
 - 红果 — 首而红: https://docs.wehifun.cn/品种和育苗/红果/首而红.html
 - 红果 — 圣宏2号: https://docs.wehifun.cn/品种和育苗/红果/圣宏2号.html
-- 黄果 — 明珠3号: https://docs.wehifun.cn/品种和育苗/黄果/明珠3号.html
+- 黄果 — 明珠3号（冠蔬茗珠3号）: https://docs.wehifun.cn/品种和育苗/黄果/明珠3号.html
 - 绿果 — 青甜: https://docs.wehifun.cn/品种和育苗/绿果/青甜.html
 - 其他颜色 — 358: https://docs.wehifun.cn/品种和育苗/其他颜色/358.html
 
@@ -33,41 +41,42 @@
 - 水系条件 — 灌溉首部: https://docs.wehifun.cn/基础条件/水系条件/灌溉首部.html
 - 水系条件 — 滴灌系统: https://docs.wehifun.cn/基础条件/水系条件/滴灌系统.html
 - 水系条件 — 滴箭系统: https://docs.wehifun.cn/基础条件/水系条件/滴箭系统.html
+- 劳动力 — 劳动力管理: https://docs.wehifun.cn/基础条件/劳动力管理.html
 
-### 产区和茬口
-- 概述: https://docs.wehifun.cn/产区和茬口/
-- 产区 — 宁夏产区: https://docs.wehifun.cn/产区和茬口/产区/宁夏产区.html
-- 产区 — 山东产区: https://docs.wehifun.cn/产区和茬口/产区/山东产区.html
-- 产区 — 广东产区: https://docs.wehifun.cn/产区和茬口/产区/广东产区.html
-- 茬口 — 越夏茬口: https://docs.wehifun.cn/产区和茬口/茬口/越夏茬口.html
-- 茬口 — 秋延茬口: https://docs.wehifun.cn/产区和茬口/茬口/秋延茬口.html
-- 茬口 — 越冬茬口: https://docs.wehifun.cn/产区和茬口/茬口/越冬茬口.html
-- 茬口 — 春延茬口: https://docs.wehifun.cn/产区和茬口/茬口/春延茬口.html
-- 价格趋势 — 全年产销价格趋势: https://docs.wehifun.cn/产区和茬口/价格趋势/全年产销价格趋势.html
-- 价格趋势 — 全国主要销售渠道: https://docs.wehifun.cn/产区和茬口/价格趋势/全国主要销售渠道.html
-- 产业模式 — 宁夏产区露地越夏茬口种植: https://docs.wehifun.cn/产区和茬口/产业模式/宁夏产区露地越夏茬口种植.html
-- 产业模式 — 宁夏产区小拱棚越夏茬口种植: https://docs.wehifun.cn/产区和茬口/产业模式/宁夏产区小拱棚越夏茬口种植.html
-- 产业模式 — 山东产区越冬和春延茬口种植: https://docs.wehifun.cn/产区和茬口/产业模式/山东产区越冬和春延茬口种植.html
-- 产业模式 — 山东产区秋延茬口种植: https://docs.wehifun.cn/产区和茬口/产业模式/山东产区秋延茬口种植.html
-- 产业模式 — 广东产区露地越冬茬口种植: https://docs.wehifun.cn/产区和茬口/产业模式/广东产区露地越冬茬口种植.html
-- 产业模式 — 广东产区小拱棚越冬茬口种植: https://docs.wehifun.cn/产区和茬口/产业模式/广东产区小拱棚越冬茬口种植.html
+### 种植手册
+- 总览: https://docs.wehifun.cn/种植手册/
+- 宁夏海原越夏（核心产区） — 手册总览: https://docs.wehifun.cn/种植手册/宁夏海原越夏/
+- 宁夏海原越夏 — 选址与茬口: https://docs.wehifun.cn/种植手册/宁夏海原越夏/选址与茬口.html
+- 宁夏海原越夏 — 土地整备: https://docs.wehifun.cn/种植手册/宁夏海原越夏/土地整备.html
+- 宁夏海原越夏 — 灌溉设施: https://docs.wehifun.cn/种植手册/宁夏海原越夏/灌溉设施.html
+- 宁夏海原越夏 — 生长发育（含增糖/防裂方案）: https://docs.wehifun.cn/种植手册/宁夏海原越夏/生长发育.html
+- 宁夏海原越夏 — 小拱棚生产: https://docs.wehifun.cn/种植手册/宁夏海原越夏/小拱棚生产.html
+- 宁夏海原越夏 — 拉秧清园: https://docs.wehifun.cn/种植手册/宁夏海原越夏/拉秧清园.html
+- 山东基质 — 手册总览: https://docs.wehifun.cn/种植手册/山东基质/
+- 山东基质 — 农事管理: https://docs.wehifun.cn/种植手册/山东基质/农事管理.html
+- 山东基质 — 水肥管理: https://docs.wehifun.cn/种植手册/山东基质/水肥管理.html
+- 山东基质 — 水肥管理FAQ: https://docs.wehifun.cn/种植手册/山东基质/水肥管理FAQ.html
+- 山东基质 — 病虫害管理: https://docs.wehifun.cn/种植手册/山东基质/病虫害管理.html
+- 宁夏中宁越夏 — 手册总览: https://docs.wehifun.cn/种植手册/宁夏中宁越夏/
+- 宁夏中宁越夏 — 选址与气候: https://docs.wehifun.cn/种植手册/宁夏中宁越夏/选址与气候.html
+- 宁夏中宁越夏 — 土地整备: https://docs.wehifun.cn/种植手册/宁夏中宁越夏/土地整备.html
+- 宁夏中宁越夏 — 灌溉设施: https://docs.wehifun.cn/种植手册/宁夏中宁越夏/灌溉设施.html
+- 宁夏中宁越夏 — 生长发育: https://docs.wehifun.cn/种植手册/宁夏中宁越夏/生长发育.html
+- 宁夏中宁越夏 — 大棚生产: https://docs.wehifun.cn/种植手册/宁夏中宁越夏/大棚生产.html
+- 宁夏中宁越夏 — 露地生产: https://docs.wehifun.cn/种植手册/宁夏中宁越夏/露地生产.html
+- 宁夏中宁越夏 — 拉秧清园: https://docs.wehifun.cn/种植手册/宁夏中宁越夏/拉秧清园.html
 
-### 种植过程
-- 概述: https://docs.wehifun.cn/种植过程/
-- 定植前准备 — 宁夏产区露地越夏茬口种植: https://docs.wehifun.cn/种植过程/定植前准备/宁夏产区露地越夏茬口种植.html
-- 定植前准备 — 宁夏产区小拱棚越夏茬口种植: https://docs.wehifun.cn/种植过程/定植前准备/宁夏产区小拱棚越夏茬口种植.html
-- 水肥管理 — 宁夏产区露地越夏茬口种植: https://docs.wehifun.cn/种植过程/水肥管理/宁夏产区露地越夏茬口种植.html
-- 水肥管理 — 宁夏产区小拱棚越夏茬口种植: https://docs.wehifun.cn/种植过程/水肥管理/宁夏产区小拱棚越夏茬口种植.html
-- 水肥管理 — 山东产区日光温室基质栽培: https://docs.wehifun.cn/种植过程/水肥管理/山东产区日光温室基质栽培.html
-- 水肥管理 — 山东产区日光温室基质栽培 FAQ: https://docs.wehifun.cn/种植过程/水肥管理/山东产区日光温室基质栽培%20FAQ.html
-- 环境管理 — 宁夏产区露地越夏茬口种植: https://docs.wehifun.cn/种植过程/环境管理/宁夏产区露地越夏茬口种植.html
-- 环境管理 — 宁夏产区小拱棚越夏茬口种植: https://docs.wehifun.cn/种植过程/环境管理/宁夏产区小拱棚越夏茬口种植.html
-- 农事管理 — 宁夏产区露地越夏茬口种植: https://docs.wehifun.cn/种植过程/农事管理/宁夏产区露地越夏茬口种植.html
-- 农事管理 — 宁夏产区小拱棚越夏茬口种植: https://docs.wehifun.cn/种植过程/农事管理/宁夏产区小拱棚越夏茬口种植.html
-- 农事管理 — 山东产区日光温室基质栽培: https://docs.wehifun.cn/种植过程/农事管理/山东产区日光温室基质栽培.html
-- 病虫害管理 — 宁夏产区露地越夏茬口种植: https://docs.wehifun.cn/种植过程/病虫害管理/宁夏产区露地越夏茬口种植.html
-- 病虫害管理 — 宁夏产区小拱棚越夏茬口种植: https://docs.wehifun.cn/种植过程/病虫害管理/宁夏产区小拱棚越夏茬口种植.html
-- 病虫害管理 — 山东产区日光温室基质栽培: https://docs.wehifun.cn/种植过程/病虫害管理/山东产区日光温室基质栽培.html
+### 植保
+- 植保总览: https://docs.wehifun.cn/植保/
+- 配药与控旺: https://docs.wehifun.cn/植保/配药与控旺.html
+- 熊蜂安全用药指南: https://docs.wehifun.cn/植保/熊蜂安全用药指南.html
+- 病害 — 早疫病: https://docs.wehifun.cn/植保/病害/早疫病.html
+- 病害 — 晚疫病: https://docs.wehifun.cn/植保/病害/晚疫病.html
+- 病害 — 灰叶斑病: https://docs.wehifun.cn/植保/病害/灰叶斑病.html
+- 病害 — 叶霉病: https://docs.wehifun.cn/植保/病害/叶霉病.html
+- 病害 — 病毒病（TYLCV/TSWV/TMV）: https://docs.wehifun.cn/植保/病害/病毒病.html
+- 虫害 — 潜叶蛾: https://docs.wehifun.cn/植保/虫害/潜叶蛾.html
+- 虫害 — 白粉虱: https://docs.wehifun.cn/植保/虫害/白粉虱.html
 
 ### 采后处理
 - 概述: https://docs.wehifun.cn/采后处理/
@@ -87,18 +96,34 @@
 - 运输 — 装车与运输: https://docs.wehifun.cn/采后处理/运输/装车与运输.html
 - 质量管理 — 质量与安全管理: https://docs.wehifun.cn/采后处理/质量管理/质量与安全管理.html
 
-### 示例
-- 概述: https://docs.wehifun.cn/示例/
-- 智能问答 — 基于知识库的问答模板: https://docs.wehifun.cn/示例/智能问答/基于知识库的问答模板.html
-- 种植计划 — 以周为单位的种植计划模板: https://docs.wehifun.cn/示例/种植计划/以周为单位的种植计划模板.html
-- 病虫害防治 — 常见病虫害防治模板: https://docs.wehifun.cn/示例/病虫害防治/常见病虫害防治模板.html
-- 病虫害防治 — 常规病虫害用药指南: https://docs.wehifun.cn/示例/病虫害防治/常规病虫害用药指南.html
-- 溯源和数字化管理: https://docs.wehifun.cn/示例/溯源和数字化管理.html
-- ROI分析 — 宁夏产区小拱棚越夏茬口种植ROI分析模板: https://docs.wehifun.cn/示例/ROI分析/宁夏产区小拱棚越夏茬口种植ROI分析模板.html
+### 产区和茬口
+- 概述: https://docs.wehifun.cn/产区和茬口/
+- 产区 — 宁夏产区: https://docs.wehifun.cn/产区和茬口/产区/宁夏产区.html
+- 产区 — 山东产区: https://docs.wehifun.cn/产区和茬口/产区/山东产区.html
+- 产区 — 广东产区: https://docs.wehifun.cn/产区和茬口/产区/广东产区.html
+- 茬口 — 越夏茬口: https://docs.wehifun.cn/产区和茬口/茬口/越夏茬口.html
+- 茬口 — 秋延茬口: https://docs.wehifun.cn/产区和茬口/茬口/秋延茬口.html
+- 茬口 — 越冬茬口: https://docs.wehifun.cn/产区和茬口/茬口/越冬茬口.html
+- 茬口 — 春延茬口: https://docs.wehifun.cn/产区和茬口/茬口/春延茬口.html
+- 价格趋势 — 全年产销价格趋势: https://docs.wehifun.cn/产区和茬口/价格趋势/全年产销价格趋势.html
+- 价格趋势 — 全国主要销售渠道: https://docs.wehifun.cn/产区和茬口/价格趋势/全国主要销售渠道.html
+- 产业模式 — 宁夏产区露地越夏茬口种植: https://docs.wehifun.cn/产区和茬口/产业模式/宁夏产区露地越夏茬口种植.html
+- 产业模式 — 宁夏产区小拱棚越夏茬口种植: https://docs.wehifun.cn/产区和茬口/产业模式/宁夏产区小拱棚越夏茬口种植.html
+- 产业模式 — 山东产区越冬和春延茬口种植: https://docs.wehifun.cn/产区和茬口/产业模式/山东产区越冬和春延茬口种植.html
+- 产业模式 — 山东产区秋延茬口种植: https://docs.wehifun.cn/产区和茬口/产业模式/山东产区秋延茬口种植.html
+- 产业模式 — 广东产区露地越冬茬口种植: https://docs.wehifun.cn/产区和茬口/产业模式/广东产区露地越冬茬口种植.html
+- 产业模式 — 广东产区小拱棚越冬茬口种植: https://docs.wehifun.cn/产区和茬口/产业模式/广东产区小拱棚越冬茬口种植.html
+
+
+### 工具模板
+- 概述: https://docs.wehifun.cn/工具模板/
+- 智能问答 — 基于知识库的问答模板: https://docs.wehifun.cn/工具模板/智能问答/基于知识库的问答模板.html
+- 种植计划 — 以周为单位的种植计划模板: https://docs.wehifun.cn/工具模板/种植计划/以周为单位的种植计划模板.html
+- ROI分析 — 宁夏产区小拱棚越夏茬口种植ROI分析模板: https://docs.wehifun.cn/工具模板/ROI分析/宁夏产区小拱棚越夏茬口种植ROI分析模板.html
 
 ## 结构说明
 
 - 所有页面均支持 Markdown 原始格式
 - 源代码仓库: docs/ 目录
-- 顶部导航 6 大分类：品种和育苗、基础条件、产区和茬口、种植过程、采后处理、示例
+- 顶部导航 7 大分类：品种和育苗、基础条件、种植手册、植保、采后处理、产区和茬口、工具模板
 - 侧边栏导航在 docs/.vitepress/config.ts 中定义
