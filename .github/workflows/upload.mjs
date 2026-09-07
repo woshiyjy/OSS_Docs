@@ -1,6 +1,11 @@
 import OSS from 'ali-oss';
-import { readdirSync, statSync } from 'fs';
-import { join, relative } from 'path';
+import { readdirSync, readFileSync } from 'fs';
+import { createHash } from 'crypto';
+import { join } from 'path';
+
+function md5(buf) {
+  return createHash('md5').update(buf).digest('hex').toUpperCase();
+}
 
 const DIST = 'docs/.vitepress/dist';
 
@@ -13,11 +18,12 @@ async function uploadDir(client, dir, prefix) {
     if (entry.isDirectory()) {
       await uploadDir(client, localPath, ossPath);
     } else {
-      // 检查是否需要更新（基于文件大小）
-      const localSize = statSync(localPath).size;
+      // 检查是否需要更新（基于内容 MD5，避免"同大小不同内容"被跳过）
       try {
         const head = await client.head(ossPath);
-        if (head?.res?.headers?.['content-length'] === String(localSize)) {
+        const remoteEtag = String(head?.etag || '').replace(/"/g, '').toUpperCase();
+        const localMd5 = md5(readFileSync(localPath));
+        if (remoteEtag === localMd5) {
           console.log('  skip', ossPath);
           continue;
         }
